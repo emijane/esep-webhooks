@@ -16,7 +16,7 @@ This assignment uses Python (an alternative language permitted by the handout) a
 
 Run local tests with `python3 -m unittest -v`.
 
-Opening or updating an issue sends `Issue Created: <issue URL>` to Slack. GitHub ping events are ignored. Slack delivery failures raise an error without logging the webhook URL.
+Opening or updating an issue sends `issue created: <issue URL>` to Slack. GitHub ping events are ignored. Slack delivery failures raise an error without logging the webhook URL.
 
 Never commit the Slack webhook URL or AWS credentials.
 

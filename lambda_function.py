@@ -14,7 +14,7 @@ def lambda_handler(event, context):
         raise RuntimeError("SLACK_URL environment variable is missing")
     request = urllib.request.Request(
         slack_url,
-        data=json.dumps({"text": f"Issue Created: {issue_url}"}).encode("utf-8"),
+        data=json.dumps({"text": f"issue created: {issue_url}"}).encode("utf-8"),
         headers={"Content-Type": "application/json"},
         method="POST",
     )

@@ -18,7 +18,7 @@ class HandlerTests(unittest.TestCase):
             url = "https://github.com/emijane/esep-webhooks/issues/1"
             self.assertEqual(lambda_handler({"issue": {"html_url": url}}, None), "ok")
             request = send.call_args.args[0]
-            self.assertEqual(json.loads(request.data), {"text": f"Issue Created: {url}"})
+            self.assertEqual(json.loads(request.data), {"text": f"issue created: {url}"})
             self.assertEqual(request.get_method(), "POST")
 
     @patch.dict("os.environ", {"SLACK_URL": "https://example.invalid/webhook"})
